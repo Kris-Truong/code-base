@@ -1,0 +1,75 @@
+.container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    gap: 5px;
+}
+
+.container::backdrop {
+    background: hsl(0 0% 0% / 50%);
+  }
+
+.icon {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgb(63, 59, 59);
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.buttonCancel, .buttonOpen {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.buttonCancel {
+    background-color: white;
+    color:rgb(63, 59, 59);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+
+.buttonOpen {
+    background-color: #7f56d9;
+    color:white;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.buttonCancel:hover, .buttonOpen:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.buttonOpen:hover {
+    background-color: #6941c6;
+}
+
+
+
+

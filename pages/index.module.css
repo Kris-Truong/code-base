@@ -1,0 +1,169 @@
+/* Header styles */
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 0 8rem;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-shrink: 0;
+  position: fixed;
+}
+
+
+.navBar {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-grow: 1; 
+  overflow: hidden; /*this is set in case if there isn't enough space, the items shrink or truncate, instead of flowing out of the container and messed up all the layout */
+}
+
+.navBar > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.navBar > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.navBar > li > a:hover {
+  text-decoration: none;
+  color: rgb(74, 68, 68);
+  cursor: pointer;
+}
+
+
+/* Hamburger button invisible on large screen */
+.menuButton {
+  display: none; 
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* Styles for the Dashboard link */
+
+.dashboardLink {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em;
+  background-color:  #7f56d9;
+  border-radius: 5px;
+  white-space: nowrap; /*prevent text wrapping to the next line*/
+}
+
+.dashboardLink:hover {
+  background-color: #6941c6;
+}
+
+
+/* Media query for mobile screens */
+@media (max-width: 930px) {
+
+  .logo {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+
+  /* Show the hamburger button on small screens */
+  .menuButton {
+    display: block;
+  }
+
+  /* Hide the default navbar and only show the mobile version */
+  .navBar {
+    display: none; 
+  }
+
+  /* Navbar when opened */
+.navBar.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 80px; /* Account for header height */
+  width: 100%;
+  padding: 1em;
+  background-color: #74bc47;
+  border-radius: 8px;
+  z-index: 100; /* Ensure navbar is on top */
+}
+
+/* Style the list items */
+.navBar.open > li {
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+/* Style the links inside the list items */
+.navBar.open > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+.navBar.open > li > a:hover {
+  color: black;
+}
+
+/* Dashboard link styling */
+.dashboardLink.open {
+  display: none;
+}
+
+/* Style for the Dashboard container */
+.dashboardContainer {
+  width: 150px;
+  background-color: #7f56d9;
+  border-radius: 10px;
+  display: flex; /* Use flex to center content */
+  align-items: center; 
+  justify-content: center;
+  padding: 5px 10px; 
+}
+
+.dashboardContainer > a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover effect for the Dashboard container */
+.dashboardContainer:hover {
+  background-color: #6941c6;
+}
+
+
+}
+
+.contactButton {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  padding: 1rem;
+  background: #7f56d9;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
+  border: none;
+  cursor: pointer;
+
+}
+
+.contactButton:hover {
+  background: #6941c6;
+}

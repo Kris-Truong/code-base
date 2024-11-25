@@ -1,0 +1,45 @@
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    position: relative;
+    top: 11rem;
+    gap: 2rem;
+}
+
+.heroContainer.menuOpen {
+    top: 18rem;
+}
+
+.h1{
+    margin: 0;
+    font-size: clamp(1.5rem, 1.096rem + 1.559vw, 2.5rem);
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.p{
+    margin: 0;
+    font-size: clamp(0.8rem, 0.719rem + 0.312vw, 1rem);
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.img {
+    width: 100%; 
+    max-width: 680px; 
+    height: auto; 
+  }
+  
+  .img img {
+    width: 100%; 
+    height: auto; 
+  }
+
+@media (max-width: 930px) {
+    .heroContainer {
+        top: 7rem;
+    }
+}
